@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  padding: 28px 80px;
+}
+
+.apptitle{
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  font-weight: 400;
+}
+
+.sectiontitle{
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+}
+
+.userslist, .albumslist, .photoslist {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+.userslist > *, .albumslist > *{
+
+  background-color: lightgray;
+
+  padding: 8px 17px;
+  margin: 2px;
+
+  outline: 0;
+  border: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+}
+
+.photoslist > * {
+  margin: 8px;
+
+  cursor: pointer;
+}
+/* 
+.albumslist {
+  display: flex;
+  gap: 6%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.photoslist {
+  display: flex;
+  gap: 6%;
+  justify-content: center;
+  flex-wrap: wrap;
+} */

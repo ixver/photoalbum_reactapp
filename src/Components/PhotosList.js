@@ -16,14 +16,21 @@ export const PhotosList = ({currentalbumid})=>{
 
   return (
     <div>
-      {
-        photos && photos.map((photo, i)=>{
-          return (
-            <img key={i} src={photo.thumbnailUrl} alt={photo.title}/>
-          )
-        })
-      }
+      <h2 className="sectiontitle">Photos</h2>
+
+      <div className="photoslist">
+        {
+          photos && photos.length>0 ? photos.map((photo, i)=>{
+            return (
+              <img key={i} src={photo.thumbnailUrl} alt={photo.title}/>
+            )
+          }) : 
+          <>Choose a user and album</>
+        }
+      </div>
+
     </div>
-  )
+
+)
 }
 

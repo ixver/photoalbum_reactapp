@@ -15,17 +15,25 @@ export const UsersList = ({setCurrentUserId})=>{
   }, [])
 
   return (
+
     <div>
-      {
-        users && users.map((user, i)=>{
-          return (
-            <button key={i} value={user.id} onClick={e=>{setCurrentUserId(e.currentTarget.value)}}>
-              {user.name}
-            </button>
-          )
-        })
-      }
+
+      <h2 className="sectiontitle">Users</h2>
+
+      <div className="userslist">
+        {
+          users && users.map((user, i)=>{
+            return (
+              <button key={i} value={user.id} onClick={e=>{setCurrentUserId(e.currentTarget.value)}}>
+                {user.name}
+              </button>
+            )
+          })
+        }
+      </div>
+
     </div>
-  )
+
+)
 }
 

@@ -15,16 +15,22 @@ export const AlbumsList = ({currentuserid, setCurrentAlbumId})=>{
   }, [currentuserid])
 
   return (
+
     <div>
-      {
-        albums && albums.map((album, i)=>{
-          return (
-            <button key={i} value={album.id} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}>
-              {album.title}
-            </button>
-          )
-        })
-      }
+      <h2 className="sectiontitle">Albums</h2>
+
+      <div className="albumslist">
+        {
+          albums && albums.length>0 ? albums.map((album, i)=>{
+            return (
+              <button key={i} value={album.id} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}>
+                {album.title}
+              </button>
+            )
+          }) : <>Choose a user</>
+        }
+      </div>
+
     </div>
   )
 }

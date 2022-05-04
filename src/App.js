@@ -16,10 +16,10 @@ function App() {
   })
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <h1 className="apptitle">
         A Photo Album (in React)
-      </header>
+      </h1>
 
       <div>
         <UsersList {...{setCurrentUserId}}/>
