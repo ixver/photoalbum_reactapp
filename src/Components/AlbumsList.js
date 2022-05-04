@@ -19,7 +19,7 @@ export const AlbumsList = ({currentuserid, setCurrentAlbumId})=>{
       {
         albums && albums.map((album, i)=>{
           return (
-            <button key={i} value={album.id} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}> >
+            <button key={i} value={album.id} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}>
               {album.title}
             </button>
           )
