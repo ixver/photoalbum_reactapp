@@ -1,14 +1,30 @@
 
+import { useState, useEffect } from 'react';
+
+import {UsersList} from './Components/UsersList'
+import {AlbumsList} from './Components/AlbumsList'
+
 function App() {
+
+  const [currentuserid, setCurrentUserId] = useState();
+  const [currentalbumid, setCurrentAlbumId] = useState();
+
+  useEffect(()=>{
+    console.log(currentuserid);
+    console.log(currentalbumid);
+  })
+
   return (
     <div className="App">
       <header className="App-header">
-        New Empty Project
-
+        A Photo Album (in React)
       </header>
+
       <div>
-        TEST CHANGE
+        <UsersList {...{setCurrentUserId}}/>
+        <AlbumsList {...{currentuserid, setCurrentAlbumId}}/>
       </div>
+
     </div>
   );
 }
