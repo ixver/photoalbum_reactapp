@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 import {UsersList} from './Components/UsersList'
 import {AlbumsList} from './Components/AlbumsList'
+import {PhotosList} from './Components/PhotosList'
 
 function App() {
 
@@ -10,8 +11,8 @@ function App() {
   const [currentalbumid, setCurrentAlbumId] = useState();
 
   useEffect(()=>{
-    console.log(currentuserid);
-    console.log(currentalbumid);
+    console.log(`current id: ${currentuserid}`);
+    console.log(`current album: ${currentalbumid}`);
   })
 
   return (
@@ -23,6 +24,7 @@ function App() {
       <div>
         <UsersList {...{setCurrentUserId}}/>
         <AlbumsList {...{currentuserid, setCurrentAlbumId}}/>
+        <PhotosList {...{currentalbumid}}/>
       </div>
 
     </div>
