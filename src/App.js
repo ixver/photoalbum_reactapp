@@ -1,6 +1,4 @@
 
-import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
-
 import { ThemeProvider } from "./Contexts"
 
 import {UsersSection} from './Components/UsersSection'
@@ -9,11 +7,12 @@ import {PhotosSection} from './Components/PhotosSection'
 
 function App() {
 
-  console.count('APP')
-  console.log('\n# APP renders')
+  // console.count('APP')
+  // console.log('\n# APP')
 
   return (
     <ThemeProvider>
+
       <div className="app">
 
         <h1 className="apptitle">A Photo Album (in React)</h1>
@@ -24,6 +23,7 @@ function App() {
         </div>
 
       </div>
+
     </ThemeProvider>
   );
 }
