@@ -9,19 +9,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - can use any libraries you see fit to accomplish the task
 - code should be clean, readable, easily maintainable and performs well
 
-## COMPONENTS
+## ABOUT THE COMPONENTS
 
-### `_Sections`:
+### _Sections:
+- 3 key areas
 - `UsersSection`, `AlbumsSection`,  `PhotosSection`
 
-### `_Lists`
+### _Lists
+- 3 key areas
 - `UsersList`, `AlbumsList`, `PhotosList`
 
-## DATA
+## ABOUT THE DATA
 - larger data requests are stored for future use with filters
 - specific filtered data is loaded on need basis as user clicks through components
 - `useContext` implemented for better organization and future maintenance
 
-## STYLES
+## ABOUT THE STYLES
+- 3 key areas
 - `.sectiontitle`, `.sectionlists`, lists' items
 
