@@ -11,23 +11,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## COMPONENTS
 
-### Sections
-- UsersSection
-- AlbumsSection
-- PhotosSection
+### `_Sections`:
+- `UsersSection`, `AlbumsSection`,  `PhotosSection`
 
-### lists
-- UsersList
-- AlbumsList
-- PhotosList
+### `_Lists`
+- `UsersList`, `AlbumsList`, `PhotosList`
 
 ## DATA
 - larger data requests are stored for future use with filters
-- specific filtered data is loaded on need basis as user clicks through  components
-- context implemented for better organization and future maintenance
-    ### `npm test`
+- specific filtered data is loaded on need basis as user clicks through components
+- `useContext` implemented for better organization and future maintenance
 
 ## STYLES
-- sectiontitle
-- sectionlists, lists' items
+- `.sectiontitle`, `.sectionlists`, lists' items
 
