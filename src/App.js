@@ -22,8 +22,8 @@ function App() {
       </h1>
 
       <div>
-        <UsersList {...{setCurrentUserId}}/>
-        <AlbumsList {...{currentuserid, setCurrentAlbumId}}/>
+        <UsersList {...{currentuserid, setCurrentUserId, currentalbumid, setCurrentAlbumId}}/>
+        <AlbumsList {...{currentuserid, currentalbumid, setCurrentAlbumId}}/>
         <PhotosList {...{currentalbumid}}/>
       </div>
 

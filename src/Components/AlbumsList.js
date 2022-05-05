@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export const AlbumsList = ({currentuserid, setCurrentAlbumId})=>{
+export const AlbumsList = ({currentuserid, currentalbumid, setCurrentAlbumId})=>{
 
   const [albums, setAlbums] = useState([]);
 
@@ -23,7 +23,7 @@ export const AlbumsList = ({currentuserid, setCurrentAlbumId})=>{
         {
           albums && albums.length>0 ? albums.map((album, i)=>{
             return (
-              <button key={i} value={album.id} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}>
+              <button key={i} value={album.id} className={currentalbumid && String(album.id)===String(currentalbumid) ? "itemSelected" : 0} onClick={e=>{setCurrentAlbumId(e.currentTarget.value)}}>
                 {album.title}
               </button>
             )

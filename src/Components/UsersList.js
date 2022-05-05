@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export const UsersList = ({setCurrentUserId})=>{
+export const UsersList = ({currentuserid, setCurrentUserId, currentalbumid, setCurrentAlbumId})=>{
 
   const [users, setUsers] = useState([]);
 
@@ -14,6 +14,11 @@ export const UsersList = ({setCurrentUserId})=>{
 
   }, [])
 
+  const handleClick = (e) => {
+    setCurrentUserId(e.currentTarget.value);
+    currentalbumid && setCurrentAlbumId()
+  }
+
   return (
 
     <div>
@@ -24,9 +29,9 @@ export const UsersList = ({setCurrentUserId})=>{
         {
           users && users.map((user, i)=>{
             return (
-              <button key={i} value={user.id} onClick={e=>{setCurrentUserId(e.currentTarget.value)}}>
-                {user.name}
-              </button>
+                <button key={i} value={user.id} className={currentuserid && String(user.id)===String(currentuserid) ? "itemSelected" : 0} onClick={e=>handleClick(e)}>
+                  {user.name}
+                </button>
             )
           })
         }

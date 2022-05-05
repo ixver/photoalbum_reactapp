@@ -45,7 +45,7 @@ code {
 
 .userslist > *, .albumslist > *{
 
-  background-color: lightgray;
+  background-color: rgba(0, 0, 0, .1);
 
   padding: 8px 17px;
   margin: 2px;
@@ -65,6 +65,17 @@ code {
 
   cursor: pointer;
 }
+
+.userslist > *:hover, .albumslist > *:hover{
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.itemSelected {
+  color: rgba(255, 255, 255, 1)!important;
+  background-color: rgba(0, 0, 0, .8)!important;
+  font-weight: 500!important;
+}
+
 /* 
 .albumslist {
   display: flex;
