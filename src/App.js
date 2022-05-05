@@ -1,33 +1,30 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 
-import {UsersList} from './Components/UsersList'
-import {AlbumsList} from './Components/AlbumsList'
-import {PhotosList} from './Components/PhotosList'
+import { ThemeProvider } from "./Contexts"
+
+import {UsersSection} from './Components/UsersSection'
+import {AlbumsSection} from './Components/AlbumsSection'
+import {PhotosSection} from './Components/PhotosSection'
 
 function App() {
 
-  const [currentuserid, setCurrentUserId] = useState();
-  const [currentalbumid, setCurrentAlbumId] = useState();
-
-  useEffect(()=>{
-    console.log(`current id: ${currentuserid}`);
-    console.log(`current album: ${currentalbumid}`);
-  })
+  console.count('APP')
+  console.log('\n# APP renders')
 
   return (
-    <div className="app">
-      <h1 className="apptitle">
-        A Photo Album (in React)
-      </h1>
+    <ThemeProvider>
+      <div className="app">
 
-      <div>
-        <UsersList {...{currentuserid, setCurrentUserId, currentalbumid, setCurrentAlbumId}}/>
-        <AlbumsList {...{currentuserid, currentalbumid, setCurrentAlbumId}}/>
-        <PhotosList {...{currentalbumid}}/>
+        <h1 className="apptitle">A Photo Album (in React)</h1>
+        <div>
+          <UsersSection/>
+          <AlbumsSection/>
+          <PhotosSection/>
+        </div>
+
       </div>
-
-    </div>
+    </ThemeProvider>
   );
 }
 
