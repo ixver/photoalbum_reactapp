@@ -12,12 +12,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## ABOUT THE COMPONENTS
 
 ### _Sections:
-- 3 key areas
-- `UsersSection`, `AlbumsSection`,  `PhotosSection`
+- 3 key areas: `UsersSection`, `AlbumsSection`,  `PhotosSection`
 
 ### _Lists
-- 3 key areas
-- `UsersList`, `AlbumsList`, `PhotosList`
+- 3 key areas: `UsersList`, `AlbumsList`, `PhotosList`
 
 ## ABOUT THE DATA
 - larger data requests are stored for future use with filters
@@ -25,6 +23,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `useContext` implemented for better organization and future maintenance
 
 ## ABOUT THE STYLES
-- 3 key areas
-- `.sectiontitle`, `.sectionlists`, lists' items
+- 3 key areas: `.sectiontitle`, `.sectionlists`, lists' items
 
